@@ -2,6 +2,8 @@ const express = require('express')
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
+//Dotenv
+require('dotenv').config()
 // app configuration
 app.set('port', (process.env.PORT || 3000));
 // setup our express application
