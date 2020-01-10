@@ -4,11 +4,11 @@ Hi! I'm Wildan
 
 # Route
 
-**GET /webhook** : webhook verification for facebook messenger bot
-**POST /webhook** : webhook for facebook messenger bot message update
-**GET /messages**: get all messages that received
-**GET /message?mid=[MessageId]**: get message with messageId
-**DELETE /message**: delete message with mid in body as messageId
+- **GET /webhook** : webhook verification for facebook messenger bot 
+- **POST /webhook** : webhook for facebook messenger bot message update
+- **GET /messages**: get all messages that received
+- **GET /message?mid=[MessageId]**: get message with messageId
+- **DELETE /message**: delete message with mid in body as messageId
 
 ## Setting .env variable
 
