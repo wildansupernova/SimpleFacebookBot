@@ -2,7 +2,6 @@
 
 Hi! I'm Wildan 
 
-
 # Route
 
 **GET /webhook** : webhook verification for facebook messenger bot
@@ -20,3 +19,4 @@ Hi! I'm Wildan
 
 - **npm run start** to run application
 - **npm i** to install all dependencies
+- **npm run test** to run all test

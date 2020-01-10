@@ -1,7 +1,6 @@
 'use strict'
 module.exports = class {
     constructor() {
-        console.log("Init user state cache");
         this.sessions = {};
         // this.sessions = {
         //     senderId: {
