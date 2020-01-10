@@ -12,10 +12,6 @@ module.exports = class {
         // }
     }
 
-    cleanExpiredCache() {
-
-    }
-
     getStateObj(senderId) {
         return this.sessions[senderId];
     }
