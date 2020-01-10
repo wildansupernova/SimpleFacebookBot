@@ -18,6 +18,8 @@ module.exports = class {
     }
 
     deleteMessage(mid) {
-
+        const message = this.messages[mid];
+        delete this.messages[mid];
+        return message;
     }
 }

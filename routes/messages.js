@@ -7,13 +7,13 @@ module.exports = function (app, messageData) {
 
     app.get('/message', function (req, res) {
         return res.json({
-            messages: messageData.getMessages()
+            message: messageData.getMessages(req.query.mid)
         })
     });
 
     app.delete('/message', function (req, res) {
         return res.json({
-            messages: messageData.getMessages()
+            deletedMessage: messageData.deleteMessage(req.body.mid)
         })
     });
 }
