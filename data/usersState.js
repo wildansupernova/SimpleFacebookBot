@@ -2,20 +2,26 @@
 module.exports = class {
     constructor() {
         console.log("Init user state cache");
-        this.sessions
+        this.sessions = {};
         // this.sessions = {
         //     senderId: {
         //         state: "",
-        //         time: new Date()
+        //         last_updated: new Date(),
+        //         content: {}
         //     }
         // }
     }
 
     cleanExpiredCache() {
+
     }
 
-    getStateObj(senderId){
+    getStateObj(senderId) {
         return this.sessions[senderId];
+    }
+
+    setStateObj(senderId, objState) {
+        this.sessions[senderId] = objState;
     }
 }
 

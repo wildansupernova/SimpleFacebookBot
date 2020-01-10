@@ -2,7 +2,6 @@ const birthdayResponse = require('./birthdayResponses');
 const welcomeResponses = require('./welcomeResponses');
 
 const pipelineMessagesResponse = [
-    welcomeResponses,
     birthdayResponse
 ]
 
