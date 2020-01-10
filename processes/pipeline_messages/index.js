@@ -6,13 +6,14 @@ const pipelineMessagesResponse = [
     birthdayResponse
 ]
 
-module.exports = (event, usersStateData) => {
+module.exports = async (event, usersStateData) => {
     const n = pipelineMessagesResponse.length;
     let index = 0;
-    while (index < n) {
-        const result = pipelineMessagesResponse[index](event, usersStateData);
+    let keepContinue = true;
+    while (index < n && keepContinue) {
+        const result = await pipelineMessagesResponse[index](event, usersStateData);
         if (result != undefined) {
-            break;
+            keepContinue = false;
         } 
         index++;
     }
