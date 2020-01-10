@@ -20,3 +20,8 @@ Hi! I'm Wildan
 - **npm run start** to run application
 - **npm i** to install all dependencies
 - **npm run test** to run all test
+
+## Install 
+1. run `npm i`
+2. Setting .env variable like above instructions
+3. run `npm run start`
