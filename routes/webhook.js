@@ -1,3 +1,8 @@
+const processMessage = require('../processes/messages');
+const UsersState = require('../data/usersState');
+const usersStateData = new UsersState()
+
+
 module.exports = function(app, chalk){
   app.get('/webhook', function(req, res) {
     if (req.query['hub.verify_token'] === process.env.VERIFY_TOKEN){
@@ -18,6 +23,7 @@ module.exports = function(app, chalk){
        // Iterate over each messaging event
           entry.messaging.forEach(function(event) {
           console.log(event);
+          processMessage(event, usersStateData)
       });
     });
     res.sendStatus(200);
